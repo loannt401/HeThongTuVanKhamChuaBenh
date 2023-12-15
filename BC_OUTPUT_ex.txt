@@ -1,0 +1,49 @@
+PART 1. Dữ liệu
+  1) Tập luật
+    R1: S01,S28,S01,S28->D1
+    R2: S01,S04,S14,S01,S04,S14->D1
+    R3: S06,S21,S14,S06,S21,S14->D1
+    R4: S06,S04,S21,S28,S06,S04,S21,S28->D1
+    R5: S02,S19,S02,S19->D2
+    R6: S03,S08,S26,S03,S08,S26->D2
+    R7: S02,S26,S20,S02,S26,S20->D2
+    R8: S03,S08,S20,S03,S08,S20->D2
+    R9: S02,S08,S19,S22,S02,S08,S19,S22->D2
+    R10: S03,S20,S19,S22,S03,S20,S19,S22->D2
+    R11: S03,S08,S19,S03,S08,S19->D2
+    R12: S03,S26,S22,S03,S26,S22->D2
+    R13: S27,S13,S29,S27,S13,S29->D3
+    R14: S27,S13,S30,S34,S27,S13,S30,S34->D3
+    R15: S27,S29,S30,S34,S27,S29,S30,S34->D3
+    R16: S27,S13,S31,S32->D3
+    R17: S27,S29->D3
+    R18: S01,S07,S10->D4
+    R19: S07,S10,S11,S26->D4
+    R20: S01,S05,S09,S10,S16,S23->D4
+    R21: S01,S05,S09,S26,S10,S11,S37->D4
+    R22: S07,S05,S09,S26,S15,S37->D4
+    R23: S01,S07,S36,S16,S17->D5
+    R24: S01,S07,S36,S24->D5
+    R25: S01,S35,S36,S16,S17->D5
+    R26: S01,S35,S24,S36->D5
+    R27: S01,S07,S25->D6
+    R28: S01,S07,S16,S18->D6
+    R29: S01,S12,S02,S15,S36->D6
+
+  2) Triệu chứng người dùng mắc phải
+    S01, S02, S04, S13, S19, S27.
+
+  3) Bệnh nghi ngờ
+    D2.
+
+PART 2. Suy diễn
+  1) Goal D2. Tìm thấy luật R5:S02,S19,S02,S19->D2. Các goals mới cần chứng mình là S02, S19, S02, S19.
+  2) -Goal S02. Cập nhật triệu chứng S02, bởi vì được tìm thấy trong tập triệu chứng gốc S01, S02, S04, S13, S19, S27. Trả về thành công.
+  3) -Goal S19. Cập nhật triệu chứng S19, bởi vì được tìm thấy trong tập triệu chứng gốc S01, S02, S04, S13, S19, S27. Trả về thành công.
+  4) -Goal S02. Cập nhật triệu chứng S02, bởi vì được tìm thấy trong tập triệu chứng gốc S01, S02, S04, S13, S19, S27. Trả về thành công.
+  5) -Goal S19. Cập nhật triệu chứng S19, bởi vì được tìm thấy trong tập triệu chứng gốc S01, S02, S04, S13, S19, S27. Trả về thành công.
+  6) ==>Goal D2. Đã được chứng minh, Trả về thành công
+
+PART 3. Kết quả
+  1) Goal D2 được chứng minh.
+  2) Road: R5.
